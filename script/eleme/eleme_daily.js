@@ -3,6 +3,7 @@ const getCoordinateRegex1 = /^https?:\/\/air\.tb\.ele\.me\/app\/conch-page\/svip
 const getCoordinateRegex2 = /^https?:\/\/tb\.ele\.me\/wow\/alsc\/mod\/.*longitude=([^&]*).*latitude=([^&]*)/;
 const getCoordinateRegex3 = /^https?:\/\/h5\.ele\.me\/restapi\/biz\.svip_scene\/svip\/engine\/queryTrafficSupply\?.*longitude=([^&]*).*latitude=([^&]*)/;
 const getCookiesRegex = /^https?:\/\/air\.tb\.ele\.me\/app\/conch-page\/svip-grade-home\/home/;
+const getCookiesRege1 = /^https?:\/\/air\.tb\.ele\.me\/app\/conch-page\/svip-foodie-card\/home/;
 const elemeCookieKey = 'eleme_cookies';
 const elemeCoordinateKey = 'eleme_coordinate';
 const elemeMissionKey = 'eleme_mission';
@@ -295,7 +296,10 @@ function acceptMission(missionId) {
     ) && $.request.method == "GET") {
       await getCoordinate();
     }
-    else if (getCookiesRegex.test($.request.url)) {
+    else if ((
+      getCookiesRege1.test($.request.url) ||
+      getCookiesRegex.test($.request.url))) {
+      $.logger.debug(`匹配到含有cookie网址，开始获取cookie`);
       await getCookies();
     }
   }

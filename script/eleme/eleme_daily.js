@@ -2,7 +2,7 @@ const scriptName = '饿了么';
 const getCoordinateRegex1 = /^https?:\/\/air\.tb\.ele\.me\/app\/conch-page\/svip-home-tasklist-new\/home\?.*longitude=([^&]*).*latitude=([^&]*)/;
 const getCoordinateRegex2 = /^https?:\/\/tb\.ele\.me\/wow\/alsc\/mod\/.*longitude=([^&]*).*latitude=([^&]*)/;
 const getCoordinateRegex3 = /^https?:\/\/h5\.ele\.me\/restapi\/biz\.svip_scene\/svip\/engine\/queryTrafficSupply\?.*longitude=([^&]*).*latitude=([^&]*)/;
-const getCookiesRegex = /^https?:\/\/air\.tb\.ele\.me\/app\/conch-page\/svip-foodie-card\/home/;
+const getCookiesRegex = /^https?:\/\/air\.tb\.ele\.me\/app\/conch-page\/svip-grade-home\/home/;
 const elemeCookieKey = 'eleme_cookies';
 const elemeCoordinateKey = 'eleme_coordinate';
 const elemeMissionKey = 'eleme_mission';
